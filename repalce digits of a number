@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{  
+    int n,r,x,y,p=0;
+    printf("Enter a number n: ");
+    scanf("%d",&n);
+    printf("Enter x and y values ");
+    scanf(" %d %d",&x,&y);
+    
+    while(n>0)
+    {
+            r = n%10;
+
+            if(r == x)
+
+                r = y;
+
+            n= n/10;
+
+            p=p*10+r;
+
+        }
+
+       n = 0 ; // Store the reverse of num2
+
+       while(p>0)
+       {
+
+        int num = p%10;
+
+        n= n*10 + num;
+
+        p /= 10;
+
+      }
+
+        //converted number
+
+        printf(" %d" ,n);
+
+        return 0;
+
+    }
+       
